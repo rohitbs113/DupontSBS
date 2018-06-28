@@ -1,0 +1,46 @@
+Add SbS crop
+This will add a SbS crop
+---
+tags:
+  - SbS Crop
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Crop
+      required:
+        - organism
+        - created_on
+        - updated_on
+        - created_by
+        - updated_by
+      properties:
+        organism:
+          type: string
+          description: crop name
+        created_on:
+          type: date
+          description: Date
+        updated_on:
+          type: date
+          description: updated date
+        created_by:
+          type: string
+          description: username of created user
+        updated_by:
+          type: string
+          description: username of updated user
+responses:
+  200:
+    description: It will add a SbS crop

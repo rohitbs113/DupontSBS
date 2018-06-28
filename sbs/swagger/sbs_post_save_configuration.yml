@@ -1,0 +1,33 @@
+Add SbS Pipeline Configuration
+This will save SbS Pipeline Configuration
+---
+tags:
+  - SbS Pipelines
+parameters:
+  - in: path
+    name: config_filename
+    description: pipeline configuration file name
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Pipeline_configuration
+      properties:
+        file_content:
+          type: string
+          description: File Content
+responses:
+  200:
+    description: It will save a SbS Pipeline Configuration

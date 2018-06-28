@@ -1,0 +1,25 @@
+Delete SbS crop
+This will delete a SbS crop.
+---
+tags:
+  - SbS Crop
+parameters:
+  - in: path
+    name: crop_id
+    description: Crop id (primary key)
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will delete a sbs crop

@@ -1,0 +1,58 @@
+Add SbS Request
+This will add a SbS request.
+---
+tags:
+  - SbS Request
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Request
+      required:
+        - request_id
+        - sample_prep_methods
+        - sbs_internalpipeline_version
+        - request_name
+        - released_on
+        - sbs_status
+        - tx_method_id
+        - organism_id
+      properties:
+        request_id:
+          type: string
+          description: request id
+        sample_prep_methods:
+          type: string
+          description: sample prep methods
+        sbs_internalpipeline_version:
+          type: string
+          description: sbs internalpipeline version
+        request_name:
+          type: string
+          description: request name
+        released_on:
+          type: string
+          description: released on
+        sbs_status:
+          type: string
+          description: sbs status
+        tx_method_id:
+          type: string
+          description: tx method id
+        organism_id:
+          type: string
+          description: organism id
+responses:
+  200:
+    description: It will add a SbS request

@@ -1,0 +1,20 @@
+Get SbS Request's all Samples
+This will give all samples information for particular request.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will give a all Sample Information for particular request_id

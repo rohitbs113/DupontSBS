@@ -1,0 +1,20 @@
+Get SbS user
+This will give a SbS user information which contains user role, source, date created on, date updated on, user is active or not.
+---
+tags:
+  - SbS User
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will give a SbS user information

@@ -1,0 +1,30 @@
+Update SbS transformation method
+This will update SbS Transformation method for particular request ID.
+---
+tags:
+  - SbS
+parameters:
+  - in: path
+    name: request_id
+    description: Request ID
+    type: string
+    required: True
+  - in: path
+    name: tx_method
+    description: Transformation Method
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will update a SbS tx_method for particular request_id.

@@ -1,0 +1,79 @@
+Add SbS Sample
+This will add a SbS sample.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Sample1
+      required:
+        - primary_map
+        - ev_man_event
+        - other_maps
+        - request_id
+        - construct_name
+        - event_id
+        - geno_type
+        - organism
+        - researcher
+        - sample_name
+        - develop_stage
+        - growth_location
+        - treated
+      properties:
+        primary_map:
+          type: string
+          description: primary map
+        ev_man_event:
+          type: string
+          description: ev man event
+        other_maps:
+          type: string
+          description: other maps
+        request_id:
+          type: string
+          description: request id
+        construct_name:
+          type: string
+          description: construct name
+        event_id:
+          type: string
+          description: event id
+        geno_type:
+          type: string
+          description: geno type
+        organism:
+          type: string
+          description: organism
+        researcher:
+          type: string
+          desciption: researcher
+        sample_name:
+          type: string
+          description: sample name
+        develop_stage:
+          type: string
+          description: develop stage
+        growth_location:
+          type: string
+          description: growth location
+        treated:
+          type: string
+          description: treated
+
+responses:
+  200:
+    description: It will add a SbS sample

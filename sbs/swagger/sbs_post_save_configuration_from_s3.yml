@@ -1,0 +1,25 @@
+Add SbS Pipeline Configuration from S3
+This will add SbS Pipeline Configuration from S3
+---
+tags:
+  - SbS Pipelines
+parameters:
+  - in: path
+    name: config_filename
+    description: pipeline configuration file name
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will add a SbS Pipeline Configuration from S3

@@ -1,0 +1,25 @@
+Get SbS Observed Map comments
+This will give all comments information for particular observed map.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: observed_map_id
+    description: ObservedMap ID of a Request
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will give all Comments Information for particular observed_map_id

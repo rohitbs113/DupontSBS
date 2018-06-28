@@ -1,0 +1,39 @@
+Update SbS user
+This will update a SbS user which contains user role.
+---
+tags:
+  - SbS User
+parameters:
+  - in: path
+    name: username
+    description: User name
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: User
+      required:
+        - role
+        - active
+      properties:
+        role:
+          type: string
+          description: User Role
+        active:
+          type: string
+          description: Is it active or not
+responses:
+  200:
+    description: It will update a SbS user

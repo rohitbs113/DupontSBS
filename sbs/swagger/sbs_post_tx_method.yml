@@ -1,0 +1,46 @@
+Add SbS tx_method
+This will add a SbS transformation method
+---
+tags:
+  - SbS Tx_Method
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Tx_Method
+      required:
+        - tx_method
+        - created_on
+        - updated_on
+        - created_by
+        - updated_by
+      properties:
+        tx_method:
+          type: string
+          description: transfromation method name
+        created_on:
+          type: date
+          description: Date
+        updated_on:
+          type: date
+          description: updated date
+        created_by:
+          type: string
+          description: username of created user
+        updated_by:
+          type: string
+          description: username of updated user
+responses:
+  200:
+    description: It will add a SbS transformation method

@@ -1,0 +1,30 @@
+Add SbS Sample comment
+This will add a comment for particular Sample.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: sample_comment
+      required:
+        - comment
+      properties:
+        comment:
+          type: string
+          description: comment
+responses:
+  200:
+    description: It will add Comment fo particular sample

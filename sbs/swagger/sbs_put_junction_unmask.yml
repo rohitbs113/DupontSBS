@@ -1,0 +1,45 @@
+Mark SbS Junction unmasked
+This will update a SbS Junction or unmasked.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: junctions_unmask
+      properties:
+        junctions:
+          type: array
+          items:
+            type: object
+            properties:
+              junction_id:
+                type: integer
+                description: junction id
+              map_analysis_id:
+                type: integer
+                description: map analysis id
+        curr_construct_id:
+          type: string
+          description: current construct id
+        curr_sample_id:
+          type: string
+          description: current sample id
+        analysis_id:
+          type: string
+          description: analysis id
+responses:
+  200:
+    description: It will update a SbS Junction to unmasked.

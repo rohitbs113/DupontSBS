@@ -1,0 +1,39 @@
+Execute duplicate detection pipeline.
+---
+tags:
+  - SbS Pipelines
+parameters:
+  - in: path
+    name: request_id
+    description: Request Id
+    type: string
+    required: True
+  - in: path
+    name: sample_id
+    description: Sample Id
+    type: string
+    required: True
+  - in: path
+    name: analysis_id
+    description: Analysis Id
+    type: string
+    required: True
+  - in: path
+    name: outfilename
+    description: Output filename
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will execute duplicate detection pipeline.

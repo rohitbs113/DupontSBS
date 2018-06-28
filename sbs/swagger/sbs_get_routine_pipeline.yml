@@ -1,0 +1,35 @@
+Submit SbS Routine pipeline
+This will submit SbS Routine pipeline
+---
+tags:
+  - SbS Pipelines
+parameters:
+  - in: path
+    name: request_id
+    description: request id
+    type: string
+    required: True
+  - in: path
+    name: analysis_id
+    description: analysis id
+    type: string
+    required: True
+  - in: query
+    name: sample_id
+    description: sample id
+    type: string
+    required: False
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will submit SbS routine pipeline job

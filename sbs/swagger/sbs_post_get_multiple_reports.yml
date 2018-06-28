@@ -1,0 +1,42 @@
+SbS get multiple reports
+This will get multiple reports for a sample.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: reports
+      properties:
+        sample_id_analysis_id_list:
+          type: array
+          items:
+            type: object
+            properties:
+              sample_id:
+                type: string
+                description: sample id
+              analysis_id:
+                type: string
+                description: analysis id
+        integrity:
+          type: string
+          description: integrity
+        junction:
+          type: string
+          description: junction
+responses:
+  200:
+    description: This will get multiple reports for particular sample.

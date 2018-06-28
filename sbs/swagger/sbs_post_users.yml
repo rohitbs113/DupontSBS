@@ -1,0 +1,50 @@
+Add SbS user
+This will add a SbS user which contains user role, source, date created on, date updated on, user is active or not.
+---
+tags:
+  - SbS User
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: User1
+      required:
+        - username
+        - role
+        - active
+        - created_on
+        - source
+        - updated_on
+      properties:
+        username:
+          type: string
+          description: User Name
+        role:
+          type: string
+          description: User Role
+        active:
+          type: string
+          description: Is it active or not
+        created_on:
+          type: string
+          description: Date
+        source:
+          type: string
+          description: source
+        updated_on:
+          type: string
+          description: updated date
+responses:
+  200:
+    description: It will add a SbS user

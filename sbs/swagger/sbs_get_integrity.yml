@@ -1,0 +1,24 @@
+Get SbS Sample
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: analysis_id
+    description: Analysis ID of a Request
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will provide response for Integrity.

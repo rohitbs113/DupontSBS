@@ -1,0 +1,69 @@
+Add SbS Variation
+This will add a SbS Variation.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Variation
+      properties:
+        integrities:
+          type: array
+          items:
+            type: object
+            properties:
+              position:
+                type: string
+                description: position
+              type:
+                type: string
+                description: type
+              ref_base:
+                type: string
+                description: ref base
+              sample_base:
+                type: string
+                description: sample base
+              translation:
+                type: string
+                description: translation
+              coverage:
+                type: string
+                description: coverage
+              purity:
+                type: string
+                description: purity
+              tier:
+                type: string
+                description: tier
+              read_depth:
+                type: string
+                description: read depth
+              annotation:
+                type: string
+                description: annotation
+              tier_label:
+                type: string
+                description: tier_label
+              map_analysis_id:
+                type: string
+                description: map analysis id
+              construct_id:
+                type: string
+                description: construct id
+responses:
+  200:
+    description: It will add a SbS Variation

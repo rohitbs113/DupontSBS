@@ -1,0 +1,171 @@
+{
+  "sb": {
+    "api_key_required": false,
+    "api_key": "nc4h7tawk7",
+    "apigateway_description": "API for SBS - SB",
+    "app_function": "sbs.app",
+    "aws_region": "us-east-1",
+    "manage_roles": false,
+    "project_name": "sb-thes-sbs-api",
+    "role_name": "SB-THES-SbS-Profile",
+    "s3_bucket": "sb-thes-sbsdata",
+    "memory_size": 512,
+    "exclude": [
+      "*.gz",
+      "*.rar",
+      ".tox",
+      ".cache",
+      "build",
+      "htmlcov",
+      "alembic",
+      "tests",
+      "env",
+      "egg-info"
+    ],
+    "vpc_config": {
+      "SubnetIds": [
+        "subnet-f6aff092",
+        "subnet-39b5ea5d",
+        "subnet-4faff02b"
+      ],
+      "SecurityGroupIds": [
+        "sg-c761c8b1",
+        "sg-4b86d23f"
+      ]
+    },
+    "timeout_seconds": 60,
+    "domain": "api-sbs.sb.research.phibred.com",
+    "environment_variables": {
+      "REQUIRE_ROLE": "True",
+      "s3_bucket": "sb-thes-sbsdata",
+      "s3_samples_key": "sbs-data/Samples",
+	  "aws_credential_url": "http://169.254.169.254/latest/meta-data/iam/security-credentials",
+	  "role_name": "SB-THES-SbS-Profile",
+	  "samtools_path": "tools/samtools/bin/samtools",
+	  "domain_url": "https://api-sbs.sb.research.phibred.com",
+      "sbs_pipeline_batch_recal_queue_stack_name": "sb-thes-sbs-recal",
+      "sbs_pipeline_batch_main_queue_stack_name": "sb-thes-sbsmain",
+      "sbs_pipeline_batch_quick_queue_stack_name": "sb-thes-sbsquick",
+      "sbs_pipeline_batch_rt_jobdef_name": "sb-thes-sbs-RoutinePipeline_v1-20G",
+      "sbs_pipeline_batch_wt_jobdef_name": "sb-thes-sbs-EndogenousPipeline_v1-8G",
+      "sbs_pipeline_batch_je_jobdef_name": "sb-thes-sbs-JunctionExtension_v3-20GB",
+      "sbs_pipeline_batch_ic_jobdef_name": "sb-thes-sbs-IntegrityCheck_v1-8G",
+      "sbs_pipeline_batch_gd_jobdef_name": "sb-thes-sbs-GeneDisruption_v1-20G",
+      "sbs_pipeline_batch_dd_jobdef_name": "sb-thes-sbs-Duplicationdetection_v1-8G",
+      "log_level": "INFO",
+      "region": "us-east-1"
+    }
+  },
+  "dv": {
+    "api_key_required": false,
+    "api_key": "nc4h7tawk7",
+    "apigateway_description": "API for SBS - DV",
+    "app_function": "sbs.app",
+    "aws_region": "us-east-1",
+    "manage_roles": false,
+    "role_name": "DV-THES-SbS-Profile",
+    "project_name": "dv-thes-sbs-api",
+    "s3_bucket": "dv-thes-sbsdata",
+    "memory_size": 512,
+    "domain": "api-sbs.dv.research.phibred.com",
+    "timeout_seconds": 60,
+    "exclude": [
+      "*.gz",
+      "*.rar",
+      ".tox",
+      ".cache",
+      "build",
+      "env",
+      "alembic",
+      "htmlcov",
+      "egg-info",
+      "tests"
+    ],
+    "vpc_config": {
+      "SubnetIds": [
+        "subnet-1bb4eb7f",
+        "subnet-81b9e6e5",
+        "subnet-9fb1eefb"
+      ],
+      "SecurityGroupIds": [
+        "sg-cd5651ba"
+      ]
+    },
+    "environment_variables": {
+      "region": "us-east-1",
+      "REQUIRE_ROLE": "True",
+      "s3_bucket": "dv-thes-sbsdata",
+      "log_level": "INFO",
+      "s3_samples_key": "sbs-data/Samples",
+	  "aws_credential_url": "http://169.254.169.254/latest/meta-data/iam/security-credentials",
+	  "role_name": "DV-THES-SbS-Profile",
+	  "samtools_path": "tools/samtools/bin/samtools",
+	  "domain_url": "https://api-sbs.dv.research.phibred.com",
+      "sbs_pipeline_batch_recal_queue_stack_name": "dv-thes-sbs-recal",
+      "sbs_pipeline_batch_main_queue_stack_name": "dv-thes-sbsmain",
+      "sbs_pipeline_batch_quick_queue_stack_name": "dv-thes-sbsquick",
+      "sbs_pipeline_batch_rt_jobdef_name": "dv-thes-sbs-RoutinePipeline_v1-20G",
+      "sbs_pipeline_batch_wt_jobdef_name": "dv-thes-sbs-EndogenousPipeline_v1-8G",
+      "sbs_pipeline_batch_je_jobdef_name": "dv-thes-sbs-JunctionExtension_v3-20GB",
+      "sbs_pipeline_batch_ic_jobdef_name": "dv-thes-sbs-IntegrityCheck_v1-8G",
+      "sbs_pipeline_batch_gd_jobdef_name": "dv-thes-sbs-GeneDisruption_v1-20G",
+      "sbs_pipeline_batch_dd_jobdef_name": "dv-thes-sbs-Duplicationdetection_v1-8G"
+    }
+  },
+  "qa": {
+    "api_key_required": false,
+    "api_key": "vjylwr3h6h",
+    "apigateway_description": "API for SBS - QA",
+    "app_function": "sbs.app",
+    "aws_region": "us-east-1",
+    "manage_roles": false,
+    "project_name": "qa-thes-sbs-api",
+    "role_name": "QA-THES-SbS-Profile",
+    "s3_bucket": "qa-thes-sbsdata",
+    "memory_size": 512,
+    "domain": "api-sbs.qa.research.phibred.com",
+    "timeout_seconds": 60,
+    "exclude": [
+      "*.gz",
+      "*.rar",
+      ".tox",
+      ".cache",
+      "build",
+      "env",
+      "alembic",
+      "htmlcov",
+      "egg-info",
+      "tests"
+    ],
+    "vpc_config": {
+      "SubnetIds": [
+        "subnet-6ee38741",
+        "subnet-e898fcc7",
+        "subnet-97ee8ab8"
+      ],
+      "SecurityGroupIds": [
+        "sg-8a996bfc"
+      ]
+    },
+    "environment_variables": {
+      "REQUIRE_ROLE": "True",
+      "s3_bucket": "qa-thes-sbsdata",
+      "log_level": "INFO",
+      "s3_samples_key": "sbs-data/Samples",
+	  "aws_credential_url": "http://169.254.169.254/latest/meta-data/iam/security-credentials",
+	  "role_name": "QA-THES-SbS-Profile",
+	  "samtools_path": "tools/samtools/bin/samtools",
+	  "domain_url": "https://api-sbs.qa.research.phibred.com",
+      "sbs_pipeline_batch_recal_queue_stack_name": "qa-thes-sbs-recal",
+      "sbs_pipeline_batch_main_queue_stack_name": "qa-thes-sbsmain",
+      "sbs_pipeline_batch_quick_queue_stack_name": "qa-thes-sbsquick",
+      "sbs_pipeline_batch_rt_jobdef_name": "qa-thes-sbs-RoutinePipeline_v1-20G",
+      "sbs_pipeline_batch_wt_jobdef_name": "qa-thes-sbs-EndogenousPipeline_v1-8G",
+      "sbs_pipeline_batch_je_jobdef_name": "qa-thes-sbs-JunctionExtension_v3-20GB",
+      "sbs_pipeline_batch_ic_jobdef_name": "qa-thes-sbs-IntegrityCheck_v1-8G",
+      "sbs_pipeline_batch_gd_jobdef_name": "qa-thes-sbs-GeneDisruption_v1-20G",
+      "sbs_pipeline_batch_dd_jobdef_name": "qa-thes-sbs-Duplicationdetection_v1-8G",
+      "region": "us-east-1"
+    }
+  }
+}

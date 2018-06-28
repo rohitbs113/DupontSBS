@@ -1,0 +1,34 @@
+Get SbS Sample analysis
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: request_id
+    description: RequestId of a Request
+    type: string
+    required: True
+  - in: path
+    name: type
+    description: Filter type
+    type: string
+    required: True
+  - in: query
+    name: first
+    description: To render only first record
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will provide response for individual sample page.

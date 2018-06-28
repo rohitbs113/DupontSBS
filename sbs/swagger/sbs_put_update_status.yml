@@ -1,0 +1,30 @@
+Update SbS status
+This will update SbS Status for particular request ID.
+---
+tags:
+  - SbS Request
+parameters:
+  - in: path
+    name: request_id
+    description: Request ID
+    type: string
+    required: True
+  - in: path
+    name: status
+    description: Status
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will update a SbS status for particular request_id.

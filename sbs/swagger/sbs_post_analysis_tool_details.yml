@@ -1,0 +1,40 @@
+Add SbS Aanalysis Tool Details
+This will add a SbS Aanalysis Tool Details.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: analysis_id
+    description: Analysis Id (primary key)
+    type: string
+    required: True
+  - in: path
+    name: tool_id
+    description: Tool Id (primary key)
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: analysis_tool_details
+      required:
+        - call
+      properties:
+        call:
+          type: string
+          description: Call
+responses:
+  200:
+    description: It will add a SbS Aanalysis Tool Details

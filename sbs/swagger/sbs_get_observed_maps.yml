@@ -1,0 +1,24 @@
+Get SbS Observed Maps
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: analysis_id
+    description: AnalysisId(primary key) of Request
+    type: integer
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will provide response for observed maps.

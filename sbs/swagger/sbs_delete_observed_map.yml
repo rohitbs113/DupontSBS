@@ -1,0 +1,25 @@
+Delete SbS ObservedMap
+This will delete a SbS ObservedMap.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: observed_map_id
+    description: Observed Map id (primary key)
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+responses:
+  200:
+    description: It will delete a sbs ObservedMap

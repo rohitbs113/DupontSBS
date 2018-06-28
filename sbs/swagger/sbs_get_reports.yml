@@ -1,0 +1,39 @@
+Get SbS Sample's Report
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: query
+    name: sample_id
+    description: Sample Id
+    type: string
+    required: True
+  - in: query
+    name: analysis_id
+    description: Analysis Id
+    type: string
+    required: True
+  - in: query
+    name: integrity
+    description: Integrity Report
+    type: string
+    required: True
+  - in: query
+    name: junction
+    description: Junction Report
+    type: string
+    required: True
+responses:
+  200:
+    description: It will provide pre signed URL for Integrity and Junction Reports.

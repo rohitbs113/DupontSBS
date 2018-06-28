@@ -1,0 +1,58 @@
+Add SbS Observed Map
+This will add a SbS Observed Map.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: sample_id
+    description: Sample Id
+    type: string
+    required: True
+  - in: path
+    name: analysis_id
+    description: Analysis Id
+    type: string
+    required: True
+  - in: path
+    name: map_id
+    description: Map id
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Observed_Map
+      properties:
+        construct_id:
+          type: string
+          description: construct id
+        name:
+          type: string
+          description: name
+        load_time:
+          type: string
+          description: load_time
+        length:
+          type: string
+          description: length
+        status:
+          type: string
+          description: status
+        send_to_evman:
+          type: string
+          description: send to evman
+responses:
+  200:
+    description: It will add a SbS Observed Map

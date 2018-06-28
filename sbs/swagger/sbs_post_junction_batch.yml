@@ -1,0 +1,84 @@
+Add SbS Junction
+This will add a SbS Junction.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Junction
+      properties:
+        junctions:
+          type: array
+          items:
+            type: object
+            properties:
+              end:
+                type: string
+                description: end
+              position:
+                type: string
+                description: position
+              proximal_mapping:
+                type: string
+                description: proximal mapping
+              percent_identity:
+                type: string
+                description: percent identity
+              proximal:
+                type: string
+                description: proximal
+              sequence:
+                type: string
+                description: sequence
+              length:
+                type: string
+                description: length
+              distal_mapping:
+                type: string
+                description: distal mapping
+              distal_percent_identity:
+                type: string
+                description: distal percent identity
+              distal_sequence_length:
+                type: string
+                description: distal sequence length
+              element:
+                type: string
+                description: element
+              unique_reads:
+                type: string
+                description: unique reads
+              supporting_reads:
+                type: string
+                description: supporting reads
+              duplicates:
+                type: string
+                description: duplicates
+              source:
+                type: string
+                description: junction source (for example - internal pipeline)
+              mask:
+                type: string
+                description: mask (boolean type)
+              map_analysis_id:
+                type: string
+                description: map analysis id
+              endogenous:
+                type: string
+                description: endogenous (boolean type)
+responses:
+  200:
+    description: It will add a SbS Junction

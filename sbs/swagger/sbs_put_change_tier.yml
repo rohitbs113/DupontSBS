@@ -1,0 +1,36 @@
+SbS change tier
+This will udpate a tier_label for variation.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: variation_list
+      properties:
+        variation_list:
+          type: array
+          items:
+            type: object
+            properties:
+              variation_id:
+                type: string
+                description: variation id
+              tier_label:
+                type: string
+                description: tier label
+responses:
+  200:
+    description: This will update tier_label for Variation.

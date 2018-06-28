@@ -1,0 +1,38 @@
+Add SbS Map Aanalysis
+This will add a SbS Map Analysis.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: analysis_id
+    description: Analysis Id (primary key)
+    type: string
+    required: True
+  - in: path
+    name: map_id
+    description: Map Id (primary key)
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Map_analysis
+      properties:
+        read_count:
+          type: string
+          description: Read Count
+responses:
+  200:
+    description: It will add a SbS Map Analysis

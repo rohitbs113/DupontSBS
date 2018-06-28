@@ -1,0 +1,108 @@
+Update SbS analysis
+This will update a SbS analysis.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: path
+    name: analysis_id
+    description: Analysis id (primary key)
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Analysis
+      properties:
+        reference:
+          type: string
+          description: reference
+        geno_type:
+          type: string
+          description: geno type
+        type:
+          type: string
+          description: type
+        input_map:
+          type: string
+          description: input map
+        job_status:
+          type: string
+          description: job status
+        sbs_status:
+          type: string
+          description: sbs status
+        sbs_version:
+          type: string
+          description: sbs version
+        pipeline_call:
+          type: string
+          description: pipeline call
+        current_call:
+          type: string
+          description: current call
+        event_id:
+          type: string
+          description: event id
+        backbone_call:
+          type: string
+          description: backbone call
+        released_on:
+          type: string
+          description: released on
+        sample_call:
+          type: string
+          description: sample call
+        sbs_integ_tier:
+          type: string
+          description: sbs integ tier
+        vqc_ali_pct:
+          type: string
+          description: vqc ali pct
+        is_deprecated:
+          type: string
+          description: is deprecated
+        load_date:
+          type: string
+          description: load date
+        is_visible_to_client:
+          type: string
+          description: is visible to client
+        single_read_count:
+          type: string
+          description: single read count
+        paired_read_count:
+          type: string
+          description: paired read count
+        complete_probe_coverage:
+          type: string
+          description: complete probe coverage
+        target_rate:
+          type: string
+          description: target rate
+        tier_3_reason:
+          type: string
+          description: tier 3 reason
+        manual_set:
+          type: string
+          description: manaul set
+        call_comment:
+          type: string
+          description: call comment
+        is_manual_set:
+          type: string
+          description: is manual set updated
+responses:
+  200:
+    description: It will update a SbS analysis

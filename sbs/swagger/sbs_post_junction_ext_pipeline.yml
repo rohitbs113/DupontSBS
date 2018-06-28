@@ -1,0 +1,50 @@
+Execute junction ext pipeline.
+---
+tags:
+  - SbS Pipelines
+parameters:
+  - in: path
+    name: sample_id
+    description: Sample Id
+    type: string
+    required: True
+  - in: path
+    name: analysis_id
+    description: Analysis Id
+    type: string
+    required: True
+  - in: path
+    name: map_id
+    description: Map Id
+    type: string
+    required: True
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: Junction_Extension
+      properties:
+        junction_params:
+          type: array
+          items:
+            type: object
+            properties:
+              junction_seq:
+                type: string
+                description: junction sequence
+              junction_end:
+                type: string
+                description: junction end
+responses:
+  200:
+    description: It will execute junction ext pipeline.

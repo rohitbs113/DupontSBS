@@ -1,0 +1,28 @@
+Make SbS invisible to client
+This will update a SbS invisible to client.
+---
+tags:
+  - SbS Sample
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: body
+    name: body
+    schema:
+      id: analysis_id_list
+      properties:
+        analysis_id_list:
+          type: string
+          description: analysis id list
+responses:
+  200:
+    description: It will update a SbS invisible to client.

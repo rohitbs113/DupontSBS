@@ -1,0 +1,24 @@
+Get SbS pipeline and current call details
+---
+tags:
+  - SbS Pipelines
+parameters:
+  - in: query
+    name: access_token
+    description: Access token for authentication
+    type: string
+    required: True
+  - in: header
+    name: X-Research-Identity
+    description: ID Token
+    format: string
+    type: string
+    required: True
+  - in: query
+    name: analysis_id
+    description: Analysis Id
+    type: string
+    required: True
+responses:
+  200:
+    description: It will give SbS pipeline and current call details
